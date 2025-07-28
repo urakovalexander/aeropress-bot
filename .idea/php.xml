@@ -44,6 +44,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/runtime" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
