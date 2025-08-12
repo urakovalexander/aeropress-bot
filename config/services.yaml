@@ -1,13 +1,21 @@
 parameters:
+    env(TELEGRAM_BOT_TOKEN): ''
 
 services:
     _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        autowire: true
+        autoconfigure: true
 
     App\:
         resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Kernel.php'
 
     App\Infrastructure\Telegram\TelegramClient:
         arguments:
             $token: '%env(TELEGRAM_BOT_TOKEN)%'
+
+    App\Infrastructure\Cache\RedisService:
+        arguments:
+            $redisUrl: '%env(REDIS_URL)%'
