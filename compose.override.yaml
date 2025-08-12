@@ -1,0 +1,20 @@
+
+services:
+###> doctrine/doctrine-bundle ###
+  database:
+    ports:
+      - "53055"
+###< doctrine/doctrine-bundle ###
+
+###> rabbitmq ###
+  rabbitmq:
+    ports:
+      - "5672"
+      - "15672"
+###< rabbitmq ###
+
+###> redis ###
+  redis:
+    ports:
+      - "6379"
+###< redis ###
